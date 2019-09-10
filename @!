@@ -1,0 +1,40 @@
+package main
+
+import "fmt"
+
+func sum(nums ...int) {
+        fmt.Print(nums, " ")
+        total := 0
+
+        for _, num := range nums {
+            total += num
+
+                                }
+
+                                    fmt.Println(total)
+
+                                }
+
+func main() {
+    sum(1, 2)
+    sum(1, 2, 3)
+
+    nums := []int{1, 2, 3, 4}
+    sum(nums...)
+
+    fmt.Println(adder(1, 2, 3))
+    fmt.Println(adder(9, 9))
+
+    numbers := []int{10, 20, 30}
+    fmt.Println(adder(numbers...))
+
+}
+
+// using the spread operator, can pass as many arguments as we want
+func adder(args ...int) int {
+    total := 0
+    for _, v := range args {
+        total += v
+    }
+    return total
+}
