@@ -2,27 +2,43 @@ package main
 
 import "fmt"
 
-func main(){
-    
-    m := make(map[string]int)
+func main() {
 
-    m["k1"] = 7
-    m["K2"] = 13
+	m := make(map[string]int)
 
-    fmt.Println("map:", m)
+	m["k1"] = 7
+	m["K2"] = 13
 
-    v1 := m["k1"]
-    fmt.Println("v1: ", v1)
+	fmt.Println("map:", m)
 
-    fmt.Println("len:", len(m))
+	v1 := m["k1"]
+	fmt.Println("v1: ", v1)
 
-    delete(m, "k2")
-    fmt.Println("map:", m)
+	fmt.Println("len:", len(m))
 
-    _, prs := m["k2"]
-    fmt.Println("prs:", prs)
+	delete(m, "k2")
+	fmt.Println("map:", m)
 
-    n := map[string]int{"foo": 1, "bar": 2}
-    fmt.Println("map:", n)
+	_, prs := m["k2"]
+	fmt.Println("prs:", prs)
 
+	n := map[string]int{"foo": 1, "bar": 2}
+	fmt.Println("map:", n)
+
+	birthdays := map[string]string{
+		"jim": "02/06/1990",
+		"jon": "01/01/1957",
+		"jin": "06/24/1975",
+	}
+
+	fmt.Println(birthdays)
+
+	ages := map[string]int{}
+	ages["jim"] = 28 // adding to maps
+	ages["jon"] = 61
+	ages["jin"] = 43
+
+	fmt.Println(ages, ages["jon"])
+
+	delete(ages, "jon") // removing elements from maps
 }
